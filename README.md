@@ -30,4 +30,4 @@ entities:
 ```
 ![image](https://github.com/user-attachments/assets/a2215fe0-5eeb-4414-beb8-855ab8216b06)
 
-The sliders do not work refined, and the color does not change.
+The sliders do not work refined, this is because the update is not send upon release but immediately. Also the color does not change.
