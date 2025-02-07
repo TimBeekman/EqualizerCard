@@ -1,0 +1,18 @@
+{
+  "domain": "equalizer-card",
+  "name": "Equalizer Card",
+  "version": "1.0.0",
+  "documentation": "https://github.com/TimBeekman/EqualizerCard/blob/main/README.md",
+  "dependencies": [],
+  "codeowners": ["@TimBeekman"],
+  "requirements": [],
+  "config_flow": false,
+  "homeassistant": "2021.12.0",
+  "integration": "frontend",
+  "resources": [
+    {
+      "url": "/github/TimBeekman/EqualizerCard/raw/main/equalizer-card.js",
+      "type": "module"
+    }
+  ]
+}
