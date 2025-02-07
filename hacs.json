@@ -1,0 +1,9 @@
+{
+  "name": "Equalizer Card",
+  "description": "A custom Home Assistant card for equalizer control.",
+  "codeowners": ["@TimBeekman"],
+  "category": "Lovelace",
+  "url": "https://github.com/TimBeekman/EqualizerCard",
+  "dependencies": [],
+  "manifest": "https://raw.githubusercontent.com/TimBeekman/EqualizerCard/main/manifest.json"
+}
