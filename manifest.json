@@ -11,7 +11,7 @@
   "integration": "frontend",
   "resources": [
     {
-      "url": "/github/TimBeekman/EqualizerCard/raw/main/equalizer-card.js",
+      "url": "/github/TimBeekman/EqualizerCard/raw/main/www/equalizer-card.js",
       "type": "module"
     }
   ]
