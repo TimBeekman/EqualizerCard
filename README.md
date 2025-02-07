@@ -4,6 +4,7 @@ HomeAssistant card that shows vertical sliders.
 Hi everyone,
 
 I’m working on creating my first Home Assistant card, and I’m no expert when it comes to coding. I’d really appreciate any suggestions to improve the design or any help you can offer. Below is an example configuration:
+```
 type: custom:equalizer-card
 height: 400px
 color: orange
@@ -26,7 +27,7 @@ entities:
     name: 8khz
   - entity: input_number.speakers_eq_16k
     name: 16khz
-
+```
 ![image](https://github.com/user-attachments/assets/a2215fe0-5eeb-4414-beb8-855ab8216b06)
 
 The sliders do not work refined, and the color does not change.
