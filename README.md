@@ -27,4 +27,6 @@ entities:
   - entity: input_number.speakers_eq_16k
     name: 16khz
 
+![image](https://github.com/user-attachments/assets/a2215fe0-5eeb-4414-beb8-855ab8216b06)
+
 The sliders do not work refined, and the color does not change.
