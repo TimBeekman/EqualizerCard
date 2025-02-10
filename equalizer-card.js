@@ -11,6 +11,8 @@ class EqualizerCard extends HTMLElement {
             this.appendChild(this.content);
         }
 
+        if (this._isDragging) return; // Prevent re-rendering during slider interaction
+
         this.content.innerHTML = ""; // Clear content on update
         this.content.style.height = this.config.height || "300px"; // Dynamically update height
 
@@ -49,12 +51,27 @@ class EqualizerCard extends HTMLElement {
             slider.style.border = "1px solid var(--slider-color)";
             slider.style.borderRadius = "5px";
 
+            // Debounce the service call
+            let debounceTimer;
             slider.addEventListener("input", (event) => {
-                hass.callService("input_number", "set_value", {
-                    entity_id: entityConfig.entity,
-                    value: event.target.value,
-                });
-                valueDisplay.innerText = event.target.value;
+                const value = parseFloat(event.target.value); // Ensure value is a number
+                valueDisplay.innerText = value;
+                if (debounceTimer) clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(() => {
+                    hass.callService("input_number", "set_value", {
+                        entity_id: entityConfig.entity,
+                        value: value, // Pass the numeric value here
+                    });
+                }, 300);
+            });
+
+            // Track dragging state to prevent re-renders
+            slider.addEventListener("mousedown", () => {
+                this._isDragging = true;
+            });
+
+            slider.addEventListener("mouseup", () => {
+                this._isDragging = false;
             });
 
             const label = document.createElement("span");
